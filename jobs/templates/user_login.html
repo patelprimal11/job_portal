@@ -1,0 +1,77 @@
+{% extends 'basic.html' %}
+
+{% block title %} User Login Page {% endblock %}
+{% block user_login %} active {% endblock %}
+{% block css %}
+{% endblock %}
+{% block body %}
+<style>
+    *
+    {
+        margin: 0;
+        padding: 0;
+    }
+    .container1
+        {
+            display:flex;   
+        
+            align-items:center;
+            justify-content:center;
+          
+            height: 100vh;  
+          
+           
+         }
+         .form1
+         {
+            width: auto;
+            height: auto;
+            background-color: #4f868c;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px 10px #888888;
+            padding: 20px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-left: 100px;
+            margin-right: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+         }
+</style>
+
+<div class="container1">
+
+    <form method="POST" class="form1"> {% csrf_token %}
+        <div class="container mt-5">
+            <h3 style="text-align:center;">User Login</h3>
+            <br>
+            <div class="mb-3">
+                <label for="username" class="form-label"><i style="font-weight: bold;">Username</i></label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label"><i style="font-weight: bold;">Password</i></label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
+            </div>
+           
+           <div  style=";display:flex; justify-content:center">
+            <input type="submit" value="Submit" class="btn" style="background-color: white; color:black; font-size: larger; width: 8rem;">
+            </div>
+            <br>
+            <h6>Haven't register yet, then click here        <a href="/signup/" type="submit" class="btn" style="background-color:white; color:black;">Signup</a>
+            </h6>
+
+        </div>
+    </form>
+</div>    
+{% endblock %}
+{% block js %}
+<script>
+    {% if thank %}
+    alert("Invalid Credentials. Please try again.");
+    window.location.href = "/user_login"
+    {% endif %}
+</script>
+{% endblock %}

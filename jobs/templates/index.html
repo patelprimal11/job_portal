@@ -1,0 +1,201 @@
+{% extends 'basic.html' %}
+
+{% block title %} Job Portal {% endblock %}
+{% block home %} active {% endblock %}
+{% block css %}
+{% endblock %}
+{% block body %}
+{% load static %} 
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    body{
+        line-height: 1.5;
+        font-family: 'Poppins', sans-serif;
+    }
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    .container{
+        max-width: 1170px;
+        margin:auto;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    ul{
+        list-style: none;
+    }
+    .footer{
+        background-color: #24262b;
+        padding: 70px 0;
+    }
+    .footer-col{
+       width: 25%;
+       padding: 0 15px;
+    }
+    .footer-col h4{
+        font-size: 18px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+    }
+    .footer-col h4::before{
+        content: '';
+        position: absolute;
+        left:0;
+        bottom: -10px;
+        background-color: #e91e63;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+    }
+    .footer-col ul li:not(:last-child){
+        margin-bottom: 10px;
+    }
+    .footer-col ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    .footer-col ul li a:hover{
+        color: #ffffff;
+        padding-left: 8px;
+    }
+    .footer-col .social-links a{
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: rgba(255,255,255,0.2);
+        margin:0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all 0.5s ease;
+    }
+    .footer-col .social-links .T1:hover{
+        color: #24262b;
+        /* background-color: #ffffff; */
+    
+    }
+    .T1{
+        display:block;
+        background-color: #24262b;
+        color: azure;
+        padding-block: 5px;
+        margin-block: 3px;
+        opacity: 0.8;
+    }
+    /*responsive*/
+    @media(max-width: 767px){
+      .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    }
+    @media(max-width: 574px){
+      .footer-col{
+        width: 100%;}
+    }
+
+  
+ 
+    
+    
+    
+  .p{
+    height:900px; background-image:url({%static 'img1.png' %});
+    animation-name: ppp ;
+    animation-duration:10s ;
+    animation-count:100;
+    background-size:100% 100%;
+    
+    }
+  @keyframes ppp{
+    0%   { background-image:url({%static 'img2.png' %});}
+    25%  { background-image:url({%static 'img3.png' %});}
+    50%  { background-image:url({%static 'img1.png' %});}
+    100% { background-image:url({%static 'img2.png' %});}
+}
+</style>  
+<div class="p"
+
+
+
+>
+     
+</div>
+    <div class="container-fluid mt-2" style="background-color: #4f868c; width: 100%;">
+        <div class="row">
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        {% comment %} <div class="footer-col">
+                            <h4>Startup</h4>
+                            <ul>
+                                <li><a href="/aboutus">about us</a></li>
+                                <li><a href="/service">our services</a></li>
+                                <li><a href="/static/#">privacy policy</a></li>
+                                <li><a href="/static/#">Job Searching</a></li>
+                            </ul>
+                        </div> {% endcomment %}
+                        <div class="footer-col">
+                            <h4>services</h4>
+                            <ul>
+                                <li><a href="/company_login/">Find Employees</a></li>
+                                <li><a href="/user_login/">Find Job</a></li>
+                                
+                                
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>get help</h4>
+                            <ul>
+                                <li><a href="/static/#">FAQ</a></li>
+                                <li><a href="/static/#">Security</a></li>
+                                
+                               
+                        
+                            </ul>
+                        </div>
+                     
+                        <div class="footer-col">
+                            <h4>Contact Us</h4>
+                            <ul>
+                                <li><a href="/static/#">Phone:+91 9429293397</a></li>
+                                <li><a href="/static/#">Gmail: Noob_@gmail.com</a></li>
+                                <li><a href="https://maps.app.goo.gl/9UMKYgw6Xyw1kVqz8">Location: <img  style="width:40px;height:40px;border-radius:50%" src="{% static 'map.png' %}"  style="color: white;"></a></li>
+                               
+                        
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4 style="margin-bottom: 25px;">Follow Us</h4>
+                            <div class="social-links">
+                                <p style="color: white; margin-bottom: 5px;">Noob Entity:</p>
+					 <a href="https://www.facebook.com/share/cYN5Wz3UpbphpfnX/?mibextid=qi2Omg"   > <img src="{% static 'fb-icon-1.png' %}"  style="color: white;"> </a>
+					<a href="https://www.instagram.com/thespecialchar?igsh=YmFvbHZzeWlheTlo"   > <img src="{% static 'instagram-icon-1.png' %}"  style="color: white;"> </a>
+					<a href="https://www.linkedin.com/company/thespecialcharacter/"   > <img src="{% static 'linkedin-icon-1.png'   %}" style="color: white;"> </a>
+					<a href="Take a look at The Special Character IT Services (@TheSpecialChar): https://x.com/TheSpecialChar?t=UsJTzzb0s6uwHqhxpWe4IQ&s=08"   > <img src="{% static 'twitter-icon-1.png' %}"  style="color: white;"> </a>
+
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </footer>
+         
+        </div>
+    </div>
+    
+{% endblock %}

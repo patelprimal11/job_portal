@@ -1,0 +1,70 @@
+{% extends 'basic.html' %}
+
+{% block title %} Admin Login {% endblock %}
+{% block admin_login %} active {% endblock %}
+{% block css %}
+{% endblock %}
+{% block body %}
+<style>
+    {% comment %} body{
+        background-image: url("https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    } {% endcomment %}
+   .form1{
+        display:flex;   
+        align-items:center;
+        justify-content:center;
+        height: 100vh;  
+    }
+    .container {
+        width: 400px;
+        height: auto;
+        background-color: #4f868c;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px 10px #888888;
+        padding: 40px;
+        {% comment %} margin-top: 100px;
+        margin-bottom: 100px;
+        margin-left: 100px;
+        margin-right: 100px; {% endcomment %}
+        {% comment %} display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; {% endcomment %}
+    }
+</style>
+
+
+
+    <form method="POST" class="form1"> 
+        {% csrf_token %}
+        <div class="container mt-5">
+            <h3 style="text-align:center"> Admin Login</h3>
+            <br>
+            <div class="mb-3">
+                <label for="username" class="form-label"><i style="font-weight: bold;">Username</i></label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label"><i style="font-weight: bold;">Password</i></label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
+            </div>
+            <br>
+            <div style="display:flex; justify-content:center">
+
+                <input type="submit" value="Submit" class="btn" style="background-color:white; color:black; font-size: larger; width: 8rem;">
+            </div>
+        </div>
+    </form>
+   
+{% endblock %}
+{% block js %}
+<script>
+    {% if alert %}
+    alert("Invalid Credentials. Please try again.");
+    window.location.href = "/admin_login"
+    {% endif %}
+</script>
+{% endblock %}

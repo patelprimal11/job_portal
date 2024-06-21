@@ -1,0 +1,317 @@
+
+{% extends 'basic.html' %}
+
+
+{% load static %} 
+{%block body%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+        *
+        {
+            padding: 0px;
+            margin: 0px;
+        }
+        .main
+        {
+           background-color: rgba(230, 224, 224, 0.452);
+            /* width: 80%;
+            height: 80%; */
+            display: flex;
+        
+            width: 100%;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center; 
+            justify-content: space-evenly;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            
+   
+    
+        }
+        .main div
+        {
+            width: 350px;
+            height: 400px;
+            background-color: rgb(255, 255, 255);
+        }
+        
+        .p{
+            height: 45px;
+            width:45px;
+        
+            
+        }
+
+        .pp{
+            width: 200px;
+    height: 100px;
+    gap: 20px;
+    {% comment %} margin-top: 20px; {% endcomment %}
+    margin-left: 85px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style=" text-align: center;
+   
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; background-color:white
+    ;letter-spacing:20px">ABOUT US</h1>
+        <div class="main">
+            
+        
+            <div class="me1" style="display: flex; align-items: center;padding-top: 40px;  border-radius: 40px; flex-direction: column;">
+                <div style="width: 200px;
+                      height: 200px;
+                        display: flex; 
+                        border-radius:50%;
+                        background-size: cover;
+                        background-image: url({% static 'sl.jpg' %});
+                        background-position:top;
+                        object-fit:cover; 
+                        border: 2px solid  black;">
+               
+                </div>
+                <h2>Patel Meet </h2>
+                
+                <p>Group Leader</p>
+                <div  style="display: flex; width:100px;
+                {% comment %} background-color:black; {% endcomment %}
+              height: 100px;
+              justify-content:center;
+              align-item:center;
+              justify-content:space-between;
+              {% comment %} gap: 25px;
+              margin-top: 20px; {% endcomment %}
+              ">
+           <a href="https://www.linkedin.com/in/meet-patel-undefined-994410282?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img class="p" src="{% static 'linkedin-logo.png' %}"> </a> 
+         <a href="https://github.com/Meet1323"> <img   class="p" src="{% static 'github-sign.png' %}">   </a>   
+              </div>
+            </div>
+  
+            <div class="me2" style="display: flex; align-items: center;padding-top: 40px;  border-radius: 40px; flex-direction: column;">
+                <div style="width: 200px;
+                        height: 200px;
+                         display: flex; border-radius: 50%;
+                       background-size: cover;
+                       background-image: url({% static 'primal.jpg' %});
+                       background-position:center;
+                       object-fit:cover; border: 2px solid  black;">
+               
+                </div>
+                
+                <h2>Patel Primal </h2>
+                
+                <p>Group Member</p>
+                <div  style="display: flex; width:100px;
+                  {% comment %} background-color:black; {% endcomment %}
+                height: 100px;
+                justify-content:center;
+                align-item:center;
+                justify-content:space-between;
+                {% comment %} gap: 25px;
+                margin-top: 20px; {% endcomment %}
+                ">
+             <a href="https://www.linkedin.com/in/primal-patel-7b3740283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img class="p" src="{% static 'linkedin-logo.png' %}"> </a> 
+           <a href="https://github.com/patelprimal11"> <img   class="p" src="{% static 'github-sign.png' %}">   </a>   
+                </div>
+            </div>
+   
+            <div class="me3" style="display: flex; align-items: center;padding-top: 40px;  border-radius: 40px; flex-direction: column;">
+                <div style="width: 200px;
+                        height: 200px;
+                         display: flex; border-radius: 50%;
+                       background-size: cover;
+                       background-image: url({% static 'jay.jpg' %});
+                       background-position:top;
+                       object-fit:cover; border: 2px solid  black;">
+               
+                </div>
+                <h2>Prajapati Jay </h2>
+                
+                <p>Group Member</p>
+                <div  style="display: flex; width:100px;
+                  {% comment %} background-color:black; {% endcomment %}
+                height: 100px;
+                justify-content:center;
+                align-item:center;
+                justify-content:space-between;
+                {% comment %} gap: 25px;
+                margin-top: 20px; {% endcomment %}
+                ">
+             <a href="https://www.linkedin.com/in/jay-prajapati-920961281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img class="p" src="{% static 'linkedin-logo.png' %}"> </a> 
+           <a href="https://github.com/jayprajapati2580"> <img   class="p" src="{% static 'github-sign.png' %}">   </a>   
+                </div>
+            </div>
+            <div class="me4" style="display: flex; align-items: center;padding-top: 40px;  border-radius: 40px; flex-direction: column;">
+                <div style="width: 200px;
+                        height: 200px;
+                         display: flex; border-radius: 50%;
+                       background-size: cover;
+                       background-image: url({% static 'zeel2.jpg' %});
+                       background-position:top;
+                       object-fit:cover; border: 2px solid  black;">
+               
+                </div>
+                <h2>Prajapati Zeel </h2>
+                
+                <p>Group Member</p>
+                <div  style="display: flex; width:100px;
+                  {% comment %} background-color:black; {% endcomment %}
+                height: 100px;
+                justify-content:center;
+                align-item:center;
+                justify-content:space-between;
+                {% comment %} gap: 25px;
+                margin-top: 20px; {% endcomment %}
+                ">
+               <a href="https://www.linkedin.com/in/zeel-prajapati-155943233?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img class="p" src="{% static 'linkedin-logo.png' %}"> </a> 
+               <a href="https://github.com/patelprimal11"> <img   class="p" src="{% static 'github-sign.png' %}">   </a>   
+                </div>
+            </div>  
+            <div class="me5" style="display: flex; align-items: center;padding-top: 40px;  border-radius: 40px; flex-direction: column;">
+                <div style="width: 200px;
+                        height: 200px;
+                         display: flex; border-radius: 50%;
+                       background-size: cover;
+                       background-image: url({% static 'kuldeep.jpg' %});
+                       background-position:center;
+                       object-fit:cover; border: 2px solid  black;">
+               
+                </div>
+                <h2>Desai Kuldeep </h2>
+                
+                <p>Group Member</p>
+                <div  style="display: flex; width:100px;
+                  {% comment %} background-color:black; {% endcomment %}
+                height: 100px;
+                justify-content:center;
+                align-item:center;
+                justify-content:space-between;
+                {% comment %} gap: 25px;
+                margin-top: 20px; {% endcomment %}
+                ">
+             <a href="https://www.linkedin.com/in/kuldeep-desai-1ab18a2bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img class="p" src="{% static 'linkedin-logo.png' %}"> </a> 
+           <a href="https://github.com/patelprimal11"> <img   class="p" src="{% static 'github-sign.png' %}">   </a>   
+                </div>
+            </div>
+            <div class="me6" style="display: flex; align-items: center;padding-top: 40px;  border-radius: 40px; flex-direction: column;">
+                <div style="width: 200px;
+                        height: 200px;
+                         display: flex; border-radius: 50%;
+                       background-size: cover;
+                       background-image: url({% static 'vasu.jpg' %});
+                       background-position:top;
+                       object-fit:cover; border: 2px solid  black;">
+               
+                </div>
+                    <h2>patel Vashishtha </h2>
+                    
+                    <p>Group Member</p>
+                    <div  style="display: flex; width:100px;
+                    {% comment %} background-color:black; {% endcomment %}
+                  height: 100px;
+                  justify-content:center;
+                  align-item:center;
+                  justify-content:space-between;
+                  {% comment %} gap: 25px;
+                  margin-top: 20px; {% endcomment %}
+                  ">
+               <a href="https://www.linkedin.com/in/vashishtha-patel-b43538263?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img class="p" src="{% static 'linkedin-logo.png' %}"> </a> 
+             <a href="https://github.com/Vashishtha-Patel"> <img   class="p" src="{% static 'github-sign.png' %}">   </a>   
+                  </div>
+            </div>
+            <div class="me7" style="display: flex; align-items: center;padding-top: 40px;  border-radius: 40px; flex-direction: column;">
+                <div style="width: 200px;
+                        height: 200px;
+                         display: flex; border-radius: 50%;
+                       background-size: cover;
+                       background-image: url({% static 'dhruv.jpg' %});
+                       background-position:top;
+                       object-fit:cover; border: 2px solid  black;">
+               
+                </div>
+                <h2>Patel Dhruv</h2>
+                
+                <p>Group Member</p>
+                <div  style="display: flex; width:100px;
+                {% comment %} background-color:black; {% endcomment %}
+              height: 100px;
+              justify-content:center;
+              align-item:center;
+              justify-content:space-between;
+              {% comment %} gap: 25px;
+              margin-top: 20px; {% endcomment %}
+              ">
+           <a href="https://www.linkedin.com/in/primal-patel-7b3740283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img class="p" src="{% static 'linkedin-logo.png' %}"> </a> 
+         <a href="https://github.com/patelprimal11"> <img   class="p" src="{% static 'github-sign.png' %}">   </a>   
+              </div>
+            </div>
+         
+            <div class="me8" style="display: flex; align-items: center;padding-top: 40px;  border-radius: 40px; flex-direction: column;">
+                <div style="width: 200px;
+                        height: 200px;
+                         display: flex; border-radius: 50%;
+                       background-size: cover;
+                       background-image: url({% static 'devanshi.jpg' %});
+                       background-position:center;
+                       object-fit:cover; border: 2px solid  black;">
+               
+                </div>
+                <h2>Patel Devanshi </h2>
+                
+                <p>Group Member</p>
+                <div  style="display: flex; width:100px;
+                  {% comment %} background-color:black; {% endcomment %}
+                height: 100px;
+                justify-content:center;
+                align-item:center;
+                justify-content:space-between;
+                {% comment %} gap: 25px;
+                margin-top: 20px; {% endcomment %}
+                ">
+             <a href="https://www.linkedin.com/in/devanshi-patel-8a6810248?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img class="p" src="{% static 'linkedin-logo.png' %}"> </a> 
+           <a href="https://github.com/DevanshiPatel271"> <img   class="p" src="{% static 'github-sign.png' %}">   </a>   
+                </div>
+            </div>
+            <div class="me9" style="display: flex; align-items: center;padding-top: 40px;  border-radius: 40px; flex-direction: column;">
+                <div style="width: 200px;
+                        height: 200px;
+                         display: flex; border-radius: 50%;
+                       background-size: cover;
+                       background-image: url({% static 'raj.jpg' %});
+                       background-position:top;
+                       object-fit:cover; border: 2px solid  black;">
+               
+                </div>
+                <h2>Patel Raj </h2>
+                
+                <p>Group Member</p>
+                <div  style="display: flex; width:100px;
+                  {% comment %} background-color:black; {% endcomment %}
+                height: 100px;
+                justify-content:center;
+                align-item:center;
+                justify-content:space-between;
+                {% comment %} gap: 25px;
+                margin-top: 20px; {% endcomment %}
+                ">
+             <a href="https://www.linkedin.com/in/primal-patel-7b3740283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img class="p" src="{% static 'linkedin-logo.png' %}"> </a> 
+           <a href="https://github.com/patelprimal11"> <img   class="p" src="{% static 'github-sign.png' %}">   </a>   
+                </div>
+            </div>
+          
+        </div>
+      
+    
+</body>
+</html>
+{%endblock%}
